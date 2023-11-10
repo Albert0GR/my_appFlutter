@@ -17,7 +17,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     TextStyle fontSize30 = const TextStyle(fontSize: 30);
 
     return Scaffold(
@@ -31,16 +30,18 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              'Numero de Clicks',
-              style: TextStyle(fontSize: 30),
-            ),
-            Text(
-              '10',
-              style: fontSize30,
-            ),
+            const Text('Numero de Clicks', style: TextStyle(fontSize: 30)),
+            Text('10', style: fontSize30),
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromRGBO(74, 66, 70, 0.0),
+        child: const Icon(Icons.add),
+        onPressed: () {
+          print('has hecho click');
+        },
       ),
     );
   }
